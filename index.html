@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="MIEL — um espaço de acolhimento, pausa e bem-estar.">
+  <title>MIEL | Massagem & Bem-estar</title>
+  <style>
+    :root{--cream:#f4f0e8;--paper:#fbf9f5;--sand:#e5dccd;--brown:#594a3d;--muted:#887b6c;--sage:#8b927c}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--brown);font-family:Georgia,'Times New Roman',serif}
+    a{color:inherit}
+    .top{min-height:100vh;display:flex;flex-direction:column}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:24px clamp(22px,7vw,92px);font-family:Arial,sans-serif;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+    .brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.22em;text-decoration:none}
+    .navlinks{display:flex;gap:28px}.navlinks a{text-decoration:none;color:var(--muted)}
+    .hero{flex:1;display:grid;place-items:center;text-align:center;padding:70px 24px 100px;position:relative;overflow:hidden}
+    .orb{position:absolute;width:min(65vw,560px);aspect-ratio:1;border:1px solid #d8cebd;border-radius:50%;opacity:.8}
+    .orb:before,.orb:after{content:"";position:absolute;border:1px solid #d8cebd;border-radius:50%;inset:9%}
+    .orb:after{inset:19%}
+    .hero-content{position:relative;max-width:720px}
+    .eyebrow{font:11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
+    h1{font-size:clamp(66px,13vw,132px);font-weight:400;letter-spacing:.17em;margin:22px 0 12px;padding-left:.17em}
+    .subtitle{font-size:clamp(18px,2.5vw,25px);font-style:italic;color:var(--muted);margin:0 0 34px}
+    .intro{font:14px/1.9 Arial,sans-serif;color:#776b5e;max-width:480px;margin:0 auto 32px}
+    .button{display:inline-block;padding:15px 26px;border:1px solid var(--brown);text-decoration:none;font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+    .button:hover{background:var(--brown);color:var(--paper)}
+    section{padding:100px clamp(24px,10vw,150px)}
+    .about{background:var(--paper);display:grid;grid-template-columns:1fr 1.2fr;gap:8vw;align-items:center}
+    .section-label{font:10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
+    h2{font-size:clamp(34px,5vw,54px);font-weight:400;line-height:1.15;margin:18px 0}
+    .about p,.service p,.contact p{font:14px/1.9 Arial,sans-serif;color:#786d60}
+    .quote{font-size:clamp(24px,3vw,34px);line-height:1.45;font-style:italic;color:#817765}
+    .service{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
+    .service-card{border:1px solid var(--sand);padding:38px;background:#f7f3ec}
+    .service-card h3{font-size:27px;font-weight:400;margin:0 0 15px}
+    .note{font-size:12px!important;color:#8c806f!important;border-top:1px solid var(--sand);padding-top:18px;margin-top:22px}
+    .contact{background:var(--sand);text-align:center}
+    .contact p{max-width:520px;margin:0 auto 28px}
+    footer{padding:25px;text-align:center;font:10px Arial,sans-serif;letter-spacing:.12em;color:var(--muted)}
+    @media(max-width:700px){.navlinks{gap:14px}.navlinks a{font-size:10px}.about,.service{grid-template-columns:1fr;gap:28px}section{padding-top:72px;padding-bottom:72px}.service-card{padding:28px}}
+  </style>
+</head>
+<body>
+  <main class="top" id="inicio">
+    <nav aria-label="Navegação principal">
+      <a class="brand" href="#inicio">MIEL</a>
+      <div class="navlinks"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#contato">Contato</a></div>
+    </nav>
+    <header class="hero">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Um convite para desacelerar</div>
+        <h1>MIEL</h1>
+        <p class="subtitle">Massagem &amp; Bem-estar</p>
+        <p class="intro">Um momento de pausa, acolhimento e tranquilidade no meio da rotina. Cuidado com simplicidade, atenção e respeito ao seu tempo.</p>
+        <a class="button" href="#experiencia">Conheça a proposta</a>
+      </div>
+    </header>
+  </main>
+
+  <section class="about" id="sobre">
+    <div>
+      <div class="section-label">A essência MIEL</div>
+      <h2>Cuidar também é permitir-se pausar.</h2>
+    </div>
+    <div>
+      <p class="quote">“Um momento só seu, com calma, presença e leveza.”</p>
+      <p>A MIEL nasceu da vontade de criar uma experiência acolhedora de bem-estar. A proposta é valorizar pequenos momentos de descanso, em um ambiente tranquilo e com atenção individual.</p>
+      <p>O projeto é apresentado por uma estudante de Fisioterapia e tem foco em relaxamento e bem-estar.</p>
+    </div>
+  </section>
+
+  <section class="service" id="experiencia">
+    <div>
+      <div class="section-label">A experiência</div>
+      <h2>Leveza em cada detalhe.</h2>
+      <p>Uma proposta de massagem relaxante, pensada como um momento de pausa e conforto. Cada encontro deve respeitar os limites, as preferências e o bem-estar da pessoa atendida.</p>
+    </div>
+    <div class="service-card">
+      <h3>Momento de relaxamento</h3>
+      <p>Uma experiência tranquila, com atenção ao conforto e à sensação de acolhimento.</p>
+      <p class="note">A proposta não constitui avaliação, diagnóstico ou tratamento fisioterapêutico e não substitui acompanhamento de profissional habilitado. A realização de qualquer atendimento presencial depende de supervisão e das orientações de um responsável adulto.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="section-label">Vamos conversar</div>
+    <h2>Seu momento começa com uma conversa.</h2>
+    <p>Para conhecer melhor a proposta MIEL, envie uma mensagem por e-mail. Informações sobre disponibilidade e condições serão conversadas com o responsável pelo projeto.</p>
+    <a class="button" href="mailto:camilisantosdasilvaep@gmail.com?subject=Quero%20conhecer%20a%20MIEL">Enviar e-mail</a>
+  </section>
+
+  <footer>MIEL · MASSAGEM &amp; BEM-ESTAR · COM CARINHO E RESPONSABILIDADE</footer>
+</body>
+</html>
