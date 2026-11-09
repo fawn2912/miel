@@ -72,6 +72,16 @@
     <div class="section-label">Fale com a MIEL</div>
     <h2>Vamos conversar?</h2>
     <p>Preencha o formulário para tirar dúvidas ou demonstrar interesse em uma sessão. Sua mensagem será encaminhada por e-mail.</p>
+    <div class="form" style="margin-top:30px">
+      <div class="section-label" style="text-align:center">Prefere falar pelo WhatsApp?</div>
+      <form class="form" id="whatsapp-form" style="margin-top:12px">
+        <div class="field"><label for="wa-name">Seu nome</label><input id="wa-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required></div>
+        <div class="field"><label for="wa-subject">Assunto</label><select id="wa-subject" name="subject" required><option value="">Selecione uma opção</option><option>Quero saber sobre as massagens</option><option>Tenho interesse em agendar</option><option>Quero conhecer os combos mensais</option><option>Outra dúvida</option></select></div>
+        <div class="field"><label for="wa-message">Mensagem</label><textarea id="wa-message" name="message" placeholder="Escreva sua mensagem..." required></textarea></div>
+        <button class="button" type="submit">Enviar pelo WhatsApp</button>
+        <div class="status" id="whatsapp-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
     <form class="form" id="contact-form">
       <div class="field"><label for="name">Seu nome</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required></div>
       <div class="field"><label for="email">Seu e-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required></div>
@@ -85,6 +95,21 @@
   <footer>MIEL · MASSAGEM &amp; BEM-ESTAR</footer>
 
   <script>
+    const whatsappForm = document.getElementById('whatsapp-form');
+    whatsappForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const values = Object.fromEntries(new FormData(whatsappForm).entries());
+      const text = [
+        'Olá! Vim pelo site da MIEL.',
+        'Nome: ' + values.name,
+        'Assunto: ' + values.subject,
+        'Mensagem: ' + values.message
+      ].join('\\n');
+      const whatsappUrl = 'https://wa.me/5521977306910?text=' + encodeURIComponent(text);
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      document.getElementById('whatsapp-status').textContent = 'Abrindo o WhatsApp para você enviar sua mensagem.';
+    });
+
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
     const button = document.getElementById('send-button');
