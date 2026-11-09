@@ -4,95 +4,115 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f0e8">
-  <meta name="description" content="MIEL — um espaço de acolhimento, pausa e bem-estar.">
+  <meta name="description" content="MIEL — massagens relaxantes e momentos de bem-estar.">
   <title>MIEL | Massagem & Bem-estar</title>
   <style>
-    :root{--cream:#f4f0e8;--paper:#fbf9f5;--sand:#e5dccd;--brown:#594a3d;--muted:#887b6c;--sage:#8b927c}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--cream);color:var(--brown);font-family:Georgia,'Times New Roman',serif}
-    a{color:inherit}
-    .top{min-height:100vh;display:flex;flex-direction:column}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:24px clamp(22px,7vw,92px);font-family:Arial,sans-serif;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
-    .brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.22em;text-decoration:none}
-    .navlinks{display:flex;gap:28px}.navlinks a{text-decoration:none;color:var(--muted)}
-    .hero{flex:1;display:grid;place-items:center;text-align:center;padding:70px 24px 100px;position:relative;overflow:hidden}
-    .orb{position:absolute;width:min(65vw,560px);aspect-ratio:1;border:1px solid #d8cebd;border-radius:50%;opacity:.8}
-    .orb:before,.orb:after{content:"";position:absolute;border:1px solid #d8cebd;border-radius:50%;inset:9%}
-    .orb:after{inset:19%}
-    .hero-content{position:relative;max-width:720px}
-    .eyebrow{font:11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
-    h1{font-size:clamp(66px,13vw,132px);font-weight:400;letter-spacing:.17em;margin:22px 0 12px;padding-left:.17em}
-    .subtitle{font-size:clamp(18px,2.5vw,25px);font-style:italic;color:var(--muted);margin:0 0 34px}
-    .intro{font:14px/1.9 Arial,sans-serif;color:#776b5e;max-width:480px;margin:0 auto 32px}
-    .button{display:inline-block;padding:15px 26px;border:1px solid var(--brown);text-decoration:none;font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
-    .button:hover{background:var(--brown);color:var(--paper)}
-    section{padding:100px clamp(24px,10vw,150px)}
-    .about{background:var(--paper);display:grid;grid-template-columns:1fr 1.2fr;gap:8vw;align-items:center}
-    .section-label{font:10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
-    h2{font-size:clamp(34px,5vw,54px);font-weight:400;line-height:1.15;margin:18px 0}
-    .about p,.service p,.contact p{font:14px/1.9 Arial,sans-serif;color:#786d60}
-    .quote{font-size:clamp(24px,3vw,34px);line-height:1.45;font-style:italic;color:#817765}
-    .service{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
-    .service-card{border:1px solid var(--sand);padding:38px;background:#f7f3ec}
-    .service-card h3{font-size:27px;font-weight:400;margin:0 0 15px}
-    .note{font-size:12px!important;color:#8c806f!important;border-top:1px solid var(--sand);padding-top:18px;margin-top:22px}
-    .contact{background:var(--sand);text-align:center}
-    .contact p{max-width:520px;margin:0 auto 28px}
-    footer{padding:25px;text-align:center;font:10px Arial,sans-serif;letter-spacing:.12em;color:var(--muted)}
-    @media(max-width:700px){.navlinks{gap:14px}.navlinks a{font-size:10px}.about,.service{grid-template-columns:1fr;gap:28px}section{padding-top:72px;padding-bottom:72px}.service-card{padding:28px}}
+    :root{--cream:#f4f0e8;--paper:#fbf9f5;--sand:#e5dccd;--brown:#594a3d;--muted:#887b6c;--sage:#8b927c;--line:#ded5c7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--brown);font-family:Georgia,'Times New Roman',serif}a{color:inherit}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:24px clamp(22px,7vw,92px);font:12px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+    .brand{font:22px Georgia,serif;letter-spacing:.22em;text-decoration:none}.navlinks{display:flex;gap:26px}.navlinks a{text-decoration:none;color:var(--muted)}
+    .hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:70px 24px 100px;position:relative;overflow:hidden}
+    .orb{position:absolute;width:min(65vw,560px);aspect-ratio:1;border:1px solid #d8cebd;border-radius:50%;opacity:.8}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #d8cebd;border-radius:50%;inset:9%}.orb:after{inset:19%}
+    .hero-content{position:relative;max-width:720px}.eyebrow,.section-label{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--sage)}
+    h1{font-size:clamp(66px,13vw,132px);font-weight:400;letter-spacing:.17em;margin:22px 0 12px;padding-left:.17em}.subtitle{font-size:clamp(18px,2.5vw,25px);font-style:italic;color:var(--muted);margin:0 0 28px}
+    .intro{font:14px/1.9 Arial,sans-serif;color:#776b5e;max-width:490px;margin:0 auto 32px}.button{display:inline-block;padding:15px 26px;border:1px solid var(--brown);background:transparent;color:var(--brown);text-decoration:none;font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.2s}.button:hover{background:var(--brown);color:var(--paper)}
+    section{padding:88px clamp(24px,10vw,150px)}.about{background:var(--paper);display:grid;grid-template-columns:1fr 1.2fr;gap:8vw;align-items:center}
+    h2{font-size:clamp(34px,5vw,54px);font-weight:400;line-height:1.15;margin:18px 0}.about p,.service-intro,.contact p{font:14px/1.9 Arial,sans-serif;color:#786d60}.quote{font:italic clamp(24px,3vw,34px)/1.45 Georgia,serif;color:#817765}
+    .prices{background:var(--cream)}.section-heading{text-align:center;max-width:620px;margin:0 auto 42px}.section-heading p{font:14px/1.8 Arial,sans-serif;color:var(--muted)}
+    .price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:900px;margin:auto}.price-card{background:var(--paper);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:10px}.price-card h3{font:24px Georgia,serif;font-weight:400;margin:0}.duration{font:12px Arial,sans-serif;color:var(--muted)}.price{font:30px Georgia,serif;color:#9a8268;margin-top:4px}
+    .combos{background:#eae3d7}.combo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1000px;margin:auto}.combo{background:var(--paper);padding:26px;border:1px solid #d9cfbf}.combo h3{font:22px Georgia,serif;font-weight:400;margin:0 0 10px}.combo p{font:13px/1.7 Arial,sans-serif;color:var(--muted);min-height:44px}.combo .price{font-size:29px}
+    .contact{background:var(--paper);text-align:center}.contact p{max-width:560px;margin:0 auto 30px}.form{max-width:620px;margin:34px auto 0;text-align:left;display:grid;gap:15px}.field{display:grid;gap:7px}.field label{font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#776b5e}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fffdf9;padding:14px 13px;color:var(--brown);font:14px Arial,sans-serif;border-radius:0}.field textarea{min-height:130px;resize:vertical}.form button{justify-self:center;margin-top:8px}.status{text-align:center;font:13px/1.6 Arial,sans-serif;color:#65745c;min-height:20px}.small-note{font:11px/1.7 Arial,sans-serif;color:var(--muted);max-width:620px;margin:18px auto 0}
+    footer{padding:26px;text-align:center;font:10px Arial,sans-serif;letter-spacing:.12em;color:var(--muted)}
+    @media(max-width:700px){nav{padding:20px}.navlinks{gap:12px}.navlinks a{font-size:9px}.hero{min-height:70vh}.about{grid-template-columns:1fr;gap:22px}section{padding-top:68px;padding-bottom:68px}.price-grid,.combo-grid{grid-template-columns:1fr}.combo p{min-height:0}}
   </style>
 </head>
 <body>
-  <main class="top" id="inicio">
-    <nav aria-label="Navegação principal">
-      <a class="brand" href="#inicio">MIEL</a>
-      <div class="navlinks"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#contato">Contato</a></div>
-    </nav>
-    <header class="hero">
-      <div class="orb" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="eyebrow">Um convite para desacelerar</div>
-        <h1>MIEL</h1>
-        <p class="subtitle">Massagem &amp; Bem-estar</p>
-        <p class="intro">Um momento de pausa, acolhimento e tranquilidade no meio da rotina. Cuidado com simplicidade, atenção e respeito ao seu tempo.</p>
-        <a class="button" href="#experiencia">Conheça a proposta</a>
-      </div>
-    </header>
-  </main>
+  <nav aria-label="Navegação principal">
+    <a class="brand" href="#inicio">MIEL</a>
+    <div class="navlinks"><a href="#sobre">Sobre</a><a href="#massagens">Massagens</a><a href="#combos">Combos</a><a href="#contato">Contato</a></div>
+  </nav>
+  <header class="hero" id="inicio">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Um convite para desacelerar</div>
+      <h1>MIEL</h1>
+      <p class="subtitle">Massagem &amp; Bem-estar</p>
+      <p class="intro">Um momento de pausa, acolhimento e tranquilidade no meio da rotina. Cuidado com simplicidade, atenção e respeito ao seu tempo.</p>
+      <a class="button" href="#massagens">Conheça as massagens</a>
+    </div>
+  </header>
 
   <section class="about" id="sobre">
-    <div>
-      <div class="section-label">A essência MIEL</div>
-      <h2>Cuidar também é permitir-se pausar.</h2>
-    </div>
-    <div>
-      <p class="quote">“Um momento só seu, com calma, presença e leveza.”</p>
-      <p>A MIEL nasceu da vontade de criar uma experiência acolhedora de bem-estar. A proposta é valorizar pequenos momentos de descanso, em um ambiente tranquilo e com atenção individual.</p>
-      <p>A MIEL é, neste momento, um projeto de marca desenvolvido por uma estudante de Fisioterapia. O conteúdo é informativo e não anuncia atendimentos ou serviços profissionais.</p>
+    <div><div class="section-label">A essência MIEL</div><h2>Cuidar também é permitir-se pausar.</h2></div>
+    <div><p class="quote">“Um momento só seu, com calma, presença e leveza.”</p><p>A MIEL é uma proposta de massagens relaxantes e momentos de bem-estar. Cada experiência é pensada para oferecer conforto, tranquilidade e atenção às preferências de cada pessoa.</p></div>
+  </section>
+
+  <section class="prices" id="massagens">
+    <div class="section-heading"><div class="section-label">Menu MIEL</div><h2>Escolha seu momento.</h2><p>Opções de massagens relaxantes com valores acessíveis.</p></div>
+    <div class="price-grid">
+      <article class="price-card"><h3>Massagem facial</h3><span class="duration">15 minutos</span><div class="price">R$ 25</div></article>
+      <article class="price-card"><h3>Ombros e pescoço</h3><span class="duration">20 minutos</span><div class="price">R$ 30</div></article>
+      <article class="price-card"><h3>Massagem nas costas</h3><span class="duration">30 minutos</span><div class="price">R$ 40</div></article>
+      <article class="price-card"><h3>Relaxante corporal</h3><span class="duration">45 minutos</span><div class="price">R$ 70</div></article>
     </div>
   </section>
 
-  <section class="service" id="experiencia">
-    <div>
-      <div class="section-label">A experiência</div>
-      <h2>Leveza em cada detalhe.</h2>
-      <p>Uma ideia de experiência de relaxamento, inspirada em conforto, tranquilidade e atenção ao bem-estar.</p>
+  <section class="combos" id="combos">
+    <div class="section-heading"><div class="section-label">Seu cuidado no mês</div><h2>Combos MIEL.</h2><p>Quatro sessões para incluir pequenos momentos de pausa na rotina.</p></div>
+    <div class="combo-grid">
+      <article class="combo"><h3>MIEL Essencial</h3><p>4 sessões de massagem facial.</p><div class="price">R$ 85</div></article>
+      <article class="combo"><h3>MIEL Relax</h3><p>4 sessões de ombros e pescoço.</p><div class="price">R$ 105</div></article>
+      <article class="combo"><h3>MIEL Costas</h3><p>4 sessões de massagem nas costas.</p><div class="price">R$ 140</div></article>
+      <article class="combo"><h3>MIEL Completo</h3><p>4 sessões de massagem relaxante corporal.</p><div class="price">R$ 250</div></article>
     </div>
-    <div class="service-card">
-      <h3>Momento de relaxamento</h3>
-      <p>Uma experiência tranquila, com atenção ao conforto e à sensação de acolhimento.</p>
-      <p class="note">Este site é apenas uma apresentação conceitual da marca. Não oferece avaliação, diagnóstico, tratamento ou agendamento de serviços. Atividades práticas de formação devem ocorrer somente em contexto educacional apropriado e sob supervisão habilitada.</p>
-    </div>
+    <p class="small-note" style="text-align:center">Valores sugeridos. Disponibilidade, condições e detalhes são confirmados individualmente antes de qualquer agendamento.</p>
   </section>
 
   <section class="contact" id="contato">
-    <div class="section-label">Vamos conversar</div>
-    <h2>Seu momento começa com uma conversa.</h2>
-    <p>A identidade MIEL está em desenvolvimento. Esta página apresenta o conceito visual da marca; não há agendamentos ou atendimentos anunciados neste momento.</p>
-    <span class="button" aria-label="Projeto em desenvolvimento">Projeto em desenvolvimento</span>
+    <div class="section-label">Fale com a MIEL</div>
+    <h2>Vamos conversar?</h2>
+    <p>Preencha o formulário para tirar dúvidas ou demonstrar interesse em uma sessão. Sua mensagem será encaminhada por e-mail.</p>
+    <form class="form" id="contact-form">
+      <div class="field"><label for="name">Seu nome</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required></div>
+      <div class="field"><label for="email">Seu e-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required></div>
+      <div class="field"><label for="subject">Assunto</label><select id="subject" name="assunto" required><option value="">Selecione uma opção</option><option>Quero saber sobre as massagens</option><option>Tenho interesse em agendar</option><option>Quero conhecer os combos mensais</option><option>Outra dúvida</option></select></div>
+      <div class="field"><label for="message">Mensagem</label><textarea id="message" name="message" placeholder="Escreva sua mensagem..." required></textarea></div>
+      <button class="button" id="send-button" type="submit">Enviar mensagem</button>
+      <div class="status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+    <p class="small-note">O envio do formulário é um pedido de contato, não uma confirmação automática de horário. Os detalhes serão combinados por e-mail.</p>
   </section>
+  <footer>MIEL · MASSAGEM &amp; BEM-ESTAR</footer>
 
-  <footer>MIEL · MASSAGEM &amp; BEM-ESTAR · COM CARINHO E RESPONSABILIDADE</footer>
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    const button = document.getElementById('send-button');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = 'Enviando sua mensagem...';
+      button.disabled = true;
+      button.textContent = 'Enviando...';
+      const data = Object.fromEntries(new FormData(form).entries());
+      data._subject = 'Novo contato pelo site MIEL';
+      data._template = 'table';
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/camilisantosdasilvaep@gmail.com', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json','Accept':'application/json'},
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (!response.ok || result.success === false) throw new Error(result.message || 'Não foi possível enviar agora.');
+        status.textContent = 'Mensagem enviada! Obrigado por entrar em contato com a MIEL.';
+        form.reset();
+      } catch (error) {
+        status.textContent = 'Não foi possível enviar. Tente novamente em alguns instantes.';
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Enviar mensagem';
+      }
+    });
+  </script>
 </body>
 </html>
